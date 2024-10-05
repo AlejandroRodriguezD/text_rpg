@@ -5,7 +5,7 @@ class Personaje:
         self.nombre = nombre
         self.gold = 100
         self.inventario = inventario
-        #Stats verificar
+        #Stats verificar // Mejorar atributos, organizar
         self.vida = vida
         self.dano = dano
 
@@ -22,7 +22,7 @@ class Personaje:
                 break
         else:
             self.inventario.append(objeto)
-
+        #Evaluar formula para el ataque // Reubicar?
     def ataque(self, objetivo):
         while self.vida > 0 or objetivo.vida > 0:
             self.vida -= objetivo.dano
@@ -33,7 +33,7 @@ class Entidad(Personaje):
     def __init__(self, nombre, vida, dano, inventario=None):
         super().__init__(nombre, vida, dano, inventario)
         
-#Modifica eso de mercado para que sea tipo de ubicacion y que admita combates
+#Modificar actividad, dependiendo de su valor ejecutar distintas acciones
 class Lugar:
     def __init__(self, localidad, descripcion, actividad= None):
         self.localidad = localidad
@@ -47,7 +47,7 @@ class Lugar:
         if self.actividad:
             print(self.actividad.nombre)
 
-
+        #Heredar a nueva clase NPC?
 class Mercader:
     def __init__(self, nombre, lista_de_venta):
         self.nombre = nombre

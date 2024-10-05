@@ -1,5 +1,6 @@
 import os
 
+#Algoritmo para agregar mapas
 def viaje(puntero, mapas):
     mov = []
     print("Te encuentras en: " + puntero.localidad + "\nPuedes ir a: ")

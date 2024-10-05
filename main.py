@@ -3,6 +3,7 @@ import funciones
 import os
 import time
 
+#inicializan los objetos. Personajes, items y mapas
 item = [
     clases.Objeto("Perla", "Brilla mucho, vale más", 300),
     clases.Arma("Palo", "Pega poco", 1, 1),
@@ -19,11 +20,13 @@ mapas = [
     clases.Lugar("Castillo", "Un enorme castillo custodiado por guardias"),
 ]
 
+#ubicamos al jugador 
 puntero = mapas[0]
 accion = 0
 
 #Cambiar el sistema de mercado a tipo de ubicacion para admitir areas de combate
 
+#Bucle principal
 while accion != 9:
     try:
         print(f"Ubicación actual: {puntero.localidad}\n{puntero.descripcion}")
