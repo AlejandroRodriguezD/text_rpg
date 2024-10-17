@@ -39,8 +39,8 @@ while accion != 9:
             case 1:
                 puntero = funciones.viaje(puntero, mapas)
             case 2:
-                if puntero.actividad == mercader:
-                    puntero.actividad.vender(heroe)
+                if puntero.actividad != None:
+                    puntero.actividad.ejecutar(heroe)
                     time.sleep(3)
                 else:
                     print("No existe accion a llevar a cabo\n")

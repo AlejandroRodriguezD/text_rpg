@@ -32,6 +32,9 @@ class Personaje:
 class Entidad(Personaje):
     def __init__(self, nombre, vida, dano, inventario=None):
         super().__init__(nombre, vida, dano, inventario)
+
+    def ejecutar(self, jugador):
+        pass
         
 #Modificar actividad, dependiendo de su valor ejecutar distintas acciones
 class Lugar:
@@ -53,7 +56,7 @@ class Mercader:
         self.nombre = nombre
         self.lista_de_venta = lista_de_venta
 
-    def vender(self, comprador):
+    def ejecutar(self, comprador):
         print("Elige lo que deseas comprar")
         for numerador, item in enumerate(self.lista_de_venta, start=1):
             print(f"{numerador}-{item.nombre}: {item.descripcion} {item.valor}G")
